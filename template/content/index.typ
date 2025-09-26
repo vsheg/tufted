@@ -1,4 +1,4 @@
-#import "../_template.typ": template
+#import "../config.typ": template
 
 #show: template
 
