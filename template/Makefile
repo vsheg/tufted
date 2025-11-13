@@ -13,7 +13,7 @@ html: $(HTML_FILES) assets
 # $(@D) is the directory part of the target
 _site/%.html: content/%.typ
 	@mkdir -p $(@D)
-	typst compile --root .. --format html $< $@
+	typst compile --root .. --features html --format html $< $@
 
 assets:
 	@mkdir -p _site/assets
