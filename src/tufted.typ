@@ -13,7 +13,7 @@
   ),
 )
 
-#let tufte-website(header-links: none, content) = {
+#let tufted-web(header-links: none, title: "Tufted", content) = {
   // Apply styling
   show: template-math
   show: template-refs
@@ -28,7 +28,7 @@
         "name": "viewport",
         "content": "width=device-width, initial-scale=1",
       ))
-      html.elem("title", "Posts - Sheg's Blog")
+      html.elem("title", title)
       html.elem("link", attrs: (
         "rel": "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
