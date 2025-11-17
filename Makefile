@@ -1,6 +1,8 @@
 # Extract version from typst.toml
 VERSION := $(shell grep '^version = ' typst.toml | sed 's/version = "\(.*\)"/\1/')
 
+ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+
 # Create symlink to local package cache
 .PHONY: link link-macos link-linux link-windows
 
@@ -20,12 +22,11 @@ endif
 
 link-macos:
 	mkdir -p ~/Library/Caches/typst/packages/preview/tufted
-	ln -sf . ~/Library/Caches/typst/packages/preview/tufted/$(VERSION)
+	ln -sf $(ROOT_DIR) ~/Library/Caches/typst/packages/preview/tufted/$(VERSION)
 
 link-linux:
 	mkdir -p ~/.cache/typst/packages/preview/tufted
-	ln -sf $(PWD) ~/.cache/typst/packages/preview/tufted/$(VERSION)
-
+	ln -sf $(ROOT_DIR) ~/.cache/typst/packages/preview/tufted/$(VERSION)
 # TODO: Test on Windows
 link-windows:
 	if not exist "%LOCALAPPDATA%\typst\packages\preview\tufted" mkdir "%LOCALAPPDATA%\typst\packages\preview\tufted"
