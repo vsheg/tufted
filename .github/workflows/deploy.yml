@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: typst-community/setup-typst@v4
-      - run: make link-linux
+      - run: make link
       - run: |
           cd template
           make html
