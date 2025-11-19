@@ -96,8 +96,8 @@ figure[role="math"] {
     }
 
     /* Limit image width on narrow screens */
-    img,
-    svg {
+    .marginnote img,
+    .marginnote svg {
         max-width: calc(760px / 3);
         margin: 0 auto;
         display: block;
