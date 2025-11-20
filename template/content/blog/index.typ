@@ -1,7 +1,7 @@
 #import "../index.typ": *
 #show: template
 
-= Posts
+= Blog
 
 == 2025
 
