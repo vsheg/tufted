@@ -4,6 +4,7 @@
   header-links: (
     "/": "Home",
     "/posts/": "Posts",
+    "/cv/": "CV",
     "/about/": "About",
   ),
   title: "Tufted",
