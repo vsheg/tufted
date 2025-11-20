@@ -29,9 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: typst-community/setup-typst@v4
-      - run: |
-          make link
-          make html
+      - run: make html
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v4
         with:
