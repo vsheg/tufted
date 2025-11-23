@@ -1,4 +1,4 @@
-#import "../index.typ": *
+#import "../index.typ": template, tufted
 #show: template
 
 = Iterators vs Generators in Python

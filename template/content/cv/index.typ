@@ -1,10 +1,10 @@
-#import "../index.typ": *
+#import "../index.typ": template, tufted
 #show: template
 #import "@preview/citegeist:0.2.0": load-bibliography
 
 = Edward R. Tufte
 
-#margin-note[
+#tufted.margin-note[
   Statistician, Artist, and Professor Emeritus \
   Website: #link("https://www.edwardtufte.com")[edwardtufte.com] \
   Email: #link("mailto:noreply@edwardtufte.com")[`noreply@edwardtufte.com`]
@@ -20,11 +20,11 @@ Research in statistical evidence and analytical design for information visualiza
 
 == Artworks
 
-#margin-note[
+#tufted.margin-note[
   #image("escaping-flatland.webp")
 ]
 
-#margin-note[
+#tufted.margin-note[
   A homage to Edward R. Tufte's large stainless steel sculpture titled _Escaping Flatland_
 ]
 

@@ -1,6 +1,6 @@
-#import "@preview/tufted:0.1.0": *
+#import "@preview/tufted:0.1.0"
 
-#let template = tufted-web.with(
+#let template = tufted.tufted-web.with(
   header-links: (
     "/": "Home",
     "/docs/": "Docs",

@@ -1,5 +1,5 @@
-#import "../index.typ": *
-#show: template
+#import "../index.typ": template, tufted
+#show: template.with(title: "Blog")
 
 = Blog
 
