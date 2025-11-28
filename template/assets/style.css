@@ -24,7 +24,8 @@ svg {
 
 /* TODO: Remove hack for math zooming */
 figure[role="math"] {
-    zoom: 1.4;
+    transform: scale(140%);
+    transform-origin: top left;
 }
 
 /* TODO: Think about hovering margin notes */
