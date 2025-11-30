@@ -16,8 +16,11 @@
   header-links: none,
   title: "Tufted",
   lang: "en",
-  global-css: "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
-  local-css: "/assets/tufted.css",
+  css: (
+    "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
+    "/assets/tufted.css",
+    "/assets/custom.css",
+  ),
   content,
 ) = {
   // Apply styling
@@ -36,8 +39,11 @@
         html.meta(charset: "utf-8")
         html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
         html.title(title)
-        html.link(rel: "stylesheet", href: global-css)
-        html.link(rel: "stylesheet", href: local-css)
+
+        // Stylesheets
+        for (css-link) in css {
+          html.link(rel: "stylesheet", href: css-link)
+        }
       })
 
       // Body
