@@ -16,13 +16,19 @@
 // NOTE: This page is automatically generated from the package's README.md file.
 // See the implementation below.
 
-#cmarker.render(
-  read("../assets/README.md"),
-  scope: (
-    image: (source, alt: none, format: auto) => figure(image(
-      "../../" + source, // Modify paths for images
-      alt: alt,
-      format: format,
-    )),
-  ),
-)
+#{
+  let md-content = read("../assets/README.md")
+  let md-content = md-content.trim(regex("\s*#.+?\n")) // Remove first-level heading
+
+  // Render markdown content with custom image handling
+  cmarker.render(
+    md-content,
+    scope: (
+      image: (source, alt: none, format: auto) => figure(image(
+        "../../" + source, // Modify paths for images
+        alt: alt,
+        format: format,
+      )),
+    ),
+  )
+}

@@ -4,7 +4,7 @@ A static website template built using Typst's experimental HTML export. Requires
 
 ![Tufted website](template/assets/devices.webp)
 
-## Usage
+## Installation & Usage
 
 Initialize the template from the Typst package registry:
 

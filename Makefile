@@ -45,9 +45,3 @@ check:
 # Build a zip archive for submission
 build: clean
 	zip -r tufted-${VERSION}.zip src/ template/ assets/ LICENSE README.md typst.toml
-
-
-# Copy README and necessary assets to template
-
-copy-readme:
-	cp README.md template/assets/
