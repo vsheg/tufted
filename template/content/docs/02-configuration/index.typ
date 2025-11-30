@@ -10,6 +10,15 @@ The template has 4 main components:
 - `assets/` --- Stores shared static assets, e.g., global CSS.
 - `Makefile` --- Used to build the website.
 
+== API
+
+Currently, three functions are implemented:
+
+- `tufted-web` — main template
+- `margin-note` — place content in margin notes (limited support)
+- `full-width` — place content in full-width containers (limited support)
+
+
 == Main Configuration
 
 In `config.typ`, you define own template by customizing the `tufted-web` template from the package. Here you customaize the top navigation links and the website title:
@@ -41,4 +50,3 @@ You can modify definitions at any level, and child pages will inherit the change
 #import "../index.typ": *
 #show: template.with(title: "New title")
 ```
-
